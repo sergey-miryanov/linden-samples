@@ -18,4 +18,4 @@ Replace GOOGLE_PLAY_GAME_ID with your Project Number from Google Developers Cons
 Replace GOOGLE_IN_APP_BILLING_KEY with your License key Google Play Developers
 Console (Section Services & APIs / Licensing & In-App Billing)
 
-![Sample screenshot]((https://raw.github.com/sergey-miryanov/linden-samples/master/Screenshot.png))
+![Sample screenshot](https://raw.github.com/sergey-miryanov/linden-samples/master/Screenshot.png)
