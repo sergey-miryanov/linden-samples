@@ -19,3 +19,5 @@ Replace GOOGLE_IN_APP_BILLING_KEY with your License key Google Play Developers
 Console (Section Services & APIs / Licensing & In-App Billing)
 
 ![Sample screenshot](https://raw.github.com/sergey-miryanov/linden-samples/master/Screenshot.png)
+
+Note: Don't buy managed product when purchase window appear. This is just a test button. Or if you buy managed - you can refund it (but I don't know how)
