@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+  <meta title="LindenSamples" package="ru.zzzzzzerg.linden.samples" version="1.0.0" company="Company Name" />
+  <app main="Main" path="Export" file="LindenSamples" />
+
+  <source path="Source" />
+
+  <haxelib name="openfl" />
+  <haxelib name="linden-flurry" if="android" />
+  <haxelib name="linden-localytics" if="android" />
+  <haxelib name="linden-google-iap" if="android" />
+  <haxelib name="linden-google-play" if="android" />
+  <!-- linden-google-play requires custom AndroidManifest.xml and app_id in ids.xml -->
+  <template path="AndroidManifest.xml" if="android" />
+  <template path="ids.xml" rename="res/values/ids.xml" if="android" />
+  <!-- / -->
+
+  <assets path="Assets" rename="assets" exclude="openfl.svg" />
+  <icon path="Assets/openfl.svg" />
+
+  <android target-sdk-version="19" minimum-sdk-version="14" if="android" />
+  <certificate
+    path="t.keystore"
+    password="password"
+    alias="t_alias"
+    alias-password="password" if="android" />
+
+</project>
