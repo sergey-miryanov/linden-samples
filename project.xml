@@ -7,10 +7,10 @@
   <source path="Source" />
 
   <haxelib name="openfl" />
-  <haxelib name="linden-flurry" if="android" />
-  <haxelib name="linden-localytics" if="android" />
-  <haxelib name="linden-google-iap" if="android" />
-  <haxelib name="linden-google-play" if="android" />
+  <haxelib name="linden-flurry"/>
+  <haxelib name="linden-localytics"/>
+  <haxelib name="linden-google-iap"/>
+  <haxelib name="linden-google-play"/>
   <!-- linden-google-play requires custom AndroidManifest.xml and app_id in ids.xml -->
   <template path="AndroidManifest.xml" if="android" />
   <template path="ids.xml" rename="res/values/ids.xml" if="android" />

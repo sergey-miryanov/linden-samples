@@ -13,15 +13,15 @@ import flash.Lib;
 
 import openfl.Assets;
 
-#if android
 import ru.zzzzzzerg.linden.Flurry;
 import ru.zzzzzzerg.linden.Localytics;
 
 import ru.zzzzzzerg.linden.GoogleIAP;
+import ru.zzzzzzerg.linden.iap.PurchaseInfo;
+
 import ru.zzzzzzerg.linden.GooglePlay;
 import ru.zzzzzzerg.linden.play.Achievement;
 import ru.zzzzzzerg.linden.play.AppState;
-#end
 
 class Main extends Sprite {
 
