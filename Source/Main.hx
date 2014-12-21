@@ -41,7 +41,6 @@ class Main extends Sprite {
 
   public static var STATE_KEY = 1;
 
-  public static var flurry : Flurry;
   public static var localytics : Localytics;
   public var googlePlay : GooglePlay;
   public var googleIAP : GoogleIAP;
@@ -409,29 +408,26 @@ class Main extends Sprite {
 
   public static function analytics(msg : String, ?params : Dynamic = null)
   {
-    flurry.logEvent(msg, params);
+    Flurry.logEvent(msg, params);
     localytics.tagEvent(msg, params);
   }
 
   function testFlurry(key : String)
   {
-    flurry = new Flurry();
+    Flurry.onStartSession(key);
+    Flurry.setCaptureUncaughtExceptions(true);
 
-    flurry.onStartSession(key);
-    flurry.setLogEvents(true);
-    flurry.setCaptureUncaughtExceptions(true);
+    Flurry.logEvent("TEST_LINDEN_FLURRY", null, false);
+    Flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS", {'test' : 1, 'value' : 'TEST'}, false);
 
-    flurry.logEvent("TEST_LINDEN_FLURRY", null, false);
-    flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS", {'test' : 1, 'value' : 'TEST'}, false);
+    Flurry.logEvent("TEST_LINDEN_FLURRY_TIMED", true);
+    Flurry.endTimedEvent("TEST_LINDEN_FLURRY_TIMED");
 
-    flurry.logEvent("TEST_LINDEN_FLURRY_TIMED", true);
-    flurry.endTimedEvent("TEST_LINDEN_FLURRY_TIMED");
+    Flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED", {'test' : 2, 'value' : 'TEST_TIMED'}, true);
+    Flurry.endTimedEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED");
 
-    flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED", {'test' : 2, 'value' : 'TEST_TIMED'}, true);
-    flurry.endTimedEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED");
-
-    flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED_2", {'test' : 3, 'value' : 'TEST_TIMED_2'}, true);
-    flurry.endTimedEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED_2", {'timed' : 'end'});
+    Flurry.logEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED_2", {'test' : 3, 'value' : 'TEST_TIMED_2'}, true);
+    Flurry.endTimedEvent("TEST_LINDEN_FLURRY_PARAMS_TIMED_2", {'timed' : 'end'});
   }
 
   function testLocalytics(key : String)
