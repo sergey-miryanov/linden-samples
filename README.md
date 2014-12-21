@@ -20,4 +20,6 @@ Console (Section Services & APIs / Licensing & In-App Billing)
 
 ![Sample screenshot](https://raw.github.com/sergey-miryanov/linden-samples/master/Screenshot.png)
 
-Note: Don't buy managed product when purchase window appear. This is just a test button. Or if you buy managed - you can refund it (but I don't know how)
+You can try sample application ([Get it in GooglePlay](https://play.google.com/store/apps/details?id=ru.zzzzzzerg.linden.samples)), but be aware of buying real (managed) product.
+
+Note: Don't buy managed product when purchase window appear. This is just a test button. Or if you buy managed - you can refund it (but I don't know how).
